@@ -1,6 +1,8 @@
 package com.arifahmadalfian
 
+import com.arifahmadalfian.plugins.configureResources
 import com.arifahmadalfian.plugins.configureRouting
+import com.arifahmadalfian.plugins.configureSerialization
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
@@ -11,5 +13,7 @@ fun main() {
 }
 
 fun Application.module() {
+    configureResources()
     configureRouting()
+    configureSerialization()
 }
